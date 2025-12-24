@@ -22,17 +22,13 @@ async function loadSpotDetails() {
         return;
     }
 
-    // ログアウト後もレビュー投稿フォームが表示される
-    // 本来はログイン状態を確認してフォーム表示を制御すべき
-    // loadUserFromStorage();
-    // if (isLoggedIn) {
-    //     document.getElementById('loginNotice').style.display = 'none';
-    //     document.getElementById('reviewForm').style.display = 'block';
-    //     if (currentUser) {
-    //         document.getElementById('reviewerName').value = currentUser.name;
-    //         document.getElementById('reviewerName').readOnly = true;
-    //     }
-    // }
+    async function loadSpotDetails() {
+    // ...
+    // ログイン状態を確認せずに、常にフォームを表示してしまっている
+    document.getElementById('loginNotice').style.display = 'none';
+    document.getElementById('reviewForm').style.display = 'block';
+    // ...
+}
 
     // バグ: 常にフォームを表示してしまう
     document.getElementById('loginNotice').style.display = 'none';
